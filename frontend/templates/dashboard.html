@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type= "text/css" href="/static/bootstrap.css">  
-    </head>
-    <title>Test Dashboard</title>
-    <body>
-        <h2>This is test</h2>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-primary">Primary</button>
-    </body>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bs/css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <script src="{{url_for('static', filename='bs/jquery-3.4.0.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='bs/js/bootstrap.js')}}"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</head>
+<title>Test Dashboard</title>
+
+<body>
+    <div id=header>
+        <h2>Ein Test-Dashboard.</h2>
+    </div>
+
+    <div class=container-fluid id=content>
+        <div class='row'>
+            <div class='col-sm-4'>
+                Schalte hier die Lampe an. <br>
+                <button type="button" class="btn btn-primary" onclick="turnOn()">Licht an.</button>
+            </div>
+            <div class='col-sm-4'>
+                Schalte hier die Lampe aus. <br>
+                <button type="button" class="btn btn-primary" onclick="turnOff()">Licht aus.</button>
+            </div>
+            <div class='col-sm-4'>
+                Flip the switch! <br>
+                <button type="button" class="btn btn-primary" onclick="turnOn()">Toggle.</button>
+            </div>
+        </div>
+    </div>
+
+    <div id=footer>
+        <h2>Made by me.</h2>
+    </div>
+</body>
+
 </html>
