@@ -10,16 +10,19 @@ def index():
 
 @app.route('/api/turnOn')
 def turnOn():
-    #GPIO.setPin(pinNumber, ON)
-    print("turn on lamp")
+    #GPIO.setmode(GPIO.BCM)
+    #GPIO.setup(2, GPIO.OUT)
+    #GPIO.output(2, GPIO.HIGH)
     return "Lampe eingeschaltet."
 
 @app.route('/api/turnOff')
 def turnOff():
-    #GPIO.setPin(pinNumber, ON)
+    #GPIO.setmode(GPIO.BCM)
+    #GPIO.setup(2, GPIO.OUT)
+    #GPIO.output(2, GPIO.LOW)
     return "Lampe ausgeschaltet."
 
 @app.route('/api/toggle')
 def toggle():
-    #GPIO.setPin(pinNumber, ON)
+    #yet to implement
     return "Lampe toggled."
