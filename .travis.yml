@@ -1,0 +1,5 @@
+language: python
+python:
+  - "3.6"
+after_success:
+  - docker build frontend/ -t snap
