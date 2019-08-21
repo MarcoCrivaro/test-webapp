@@ -5,7 +5,7 @@ services:
   - docker
 install:
   - pip install -r "frontend/requirements.txt"
-after_success:
+before_install:
   - docker build frontend/ -t snap
 script:
   - docker run -d snap
