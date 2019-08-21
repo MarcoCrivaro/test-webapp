@@ -2,6 +2,6 @@ language: python
 python:
   - "3.6"
 install:
-  - "frontend/requirements.txt"
+  - pip install "frontend/requirements.txt"
 after_success:
   - docker build frontend/ -t snap
