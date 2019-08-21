@@ -3,8 +3,6 @@ python:
   - "3.6"
 services:
   - docker
-install:
-  - pip install -r "frontend/requirements.txt"
 before_install:
   - docker build frontend/ -t snap
 script:
