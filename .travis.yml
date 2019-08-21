@@ -1,7 +1,11 @@
 language: python
 python:
   - "3.6"
+services:
+  - docker
 install:
   - pip install -r "frontend/requirements.txt"
 after_success:
   - docker build frontend/ -t snap
+script:
+  - docker run -d snap
